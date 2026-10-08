@@ -1,0 +1,434 @@
+.report-page {
+  min-height: 100vh;
+  background: #09090b;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+/* MAIN CONTAINER */
+
+.report-container {
+  width: 100%;
+  max-width: 1450px;
+
+  height: 88vh;
+
+  display: grid;
+  grid-template-columns: 250px 1fr 300px;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.02);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* ====================================
+   LEFT SIDEBAR
+==================================== */
+
+.sidebar-left {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-left h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* MENU BUTTONS */
+
+.menu-item {
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #94a3b8;
+
+  text-align: left;
+
+  padding: 1rem;
+
+  border-radius: 14px;
+
+  margin-bottom: 0.5rem;
+
+  cursor: pointer;
+
+  font-size: 0.95rem;
+
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+}
+
+.menu-item.active {
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #4f46e5
+  );
+
+  color: white;
+
+  box-shadow:
+    0 10px 25px rgba(99, 102, 241, 0.25);
+}
+
+/* DOWNLOAD BUTTON */
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.download-btn {
+  width: 100%;
+
+  padding: 1rem 1.25rem;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #4338ca
+  );
+
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 10px 25px rgba(99, 102, 241, 0.25);
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(99, 102, 241, 0.45);
+}
+
+/* ====================================
+   CENTER CONTENT
+==================================== */
+
+.report-content {
+  padding: 2rem;
+
+  overflow-y: auto;
+}
+
+.content-header {
+  margin-bottom: 2rem;
+}
+
+.content-header h2 {
+  color: white;
+
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+/* QUESTION CARD */
+
+.question-card {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  padding: 1.5rem;
+
+  transition: all 0.3s ease;
+}
+
+.question-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(99, 102, 241, 0.4);
+
+  box-shadow:
+    0 15px 35px rgba(99, 102, 241, 0.15);
+}
+
+.question-card h4 {
+  color: white;
+
+  margin-bottom: 1rem;
+
+  line-height: 1.5;
+}
+
+.question-card p {
+  color: #cbd5e1;
+
+  line-height: 1.8;
+}
+
+/* ====================================
+   RIGHT SIDEBAR
+==================================== */
+
+.sidebar-right {
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+
+  overflow-y: auto;
+}
+
+/* ====================================
+   SCORE CARD
+==================================== */
+
+.score-card {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 22px;
+
+  padding: 1.5rem;
+
+  text-align: center;
+
+  backdrop-filter: blur(12px);
+}
+
+.score-card h3 {
+  color: white;
+
+  margin-bottom: 1rem;
+}
+
+/* CIRCLE */
+
+.progress-circle {
+  position: relative;
+
+  width: 170px;
+  height: 170px;
+
+  margin: auto;
+}
+
+.progress-circle svg {
+  width: 100%;
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+
+.progress-circle circle {
+  fill: none;
+
+  stroke-width: 10;
+}
+
+.progress-circle .bg {
+  stroke: rgba(255, 255, 255, 0.08);
+}
+
+.progress-circle .progress {
+  stroke: #6366f1;
+
+  stroke-linecap: round;
+
+  transition: stroke-dashoffset 0.8s ease;
+
+  filter:
+    drop-shadow(
+      0 0 15px rgba(99, 102, 241, 0.8)
+    );
+}
+
+.score-text {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.score-card p {
+  margin-top: 1rem;
+
+  color: #94a3b8;
+
+  font-size: 0.9rem;
+}
+
+/* ====================================
+   SKILL GAPS
+==================================== */
+
+.skill-section {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 22px;
+
+  padding: 1.5rem;
+}
+
+.skill-section h3 {
+  color: white;
+
+  margin-bottom: 1rem;
+}
+
+.skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.75rem;
+}
+
+.skills span {
+  background: rgba(99, 102, 241, 0.15);
+
+  border: 1px solid rgba(99, 102, 241, 0.35);
+
+  color: #c7d2fe;
+
+  padding: 0.7rem 1rem;
+
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+
+  transition: all 0.3s ease;
+}
+
+.skills span:hover {
+  transform: translateY(-2px);
+
+  background: rgba(99, 102, 241, 0.25);
+}
+
+/* ====================================
+   SCROLLBAR
+==================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+
+  border-radius: 999px;
+}
+
+/* ====================================
+   TABLET
+==================================== */
+
+@media (max-width: 1200px) {
+  .report-container {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .sidebar-right {
+    display: none;
+  }
+}
+
+/* ====================================
+   MOBILE
+==================================== */
+
+@media (max-width: 768px) {
+  .report-page {
+    padding: 1rem;
+  }
+
+  .report-container {
+    grid-template-columns: 1fr;
+
+    height: auto;
+  }
+
+  .sidebar-left {
+    border-right: none;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .sidebar-footer {
+    margin-top: 1rem;
+  }
+
+  .content-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .question-card {
+    padding: 1rem;
+  }
+
+  .menu-item {
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    margin-top: 1rem;
+  }
+}

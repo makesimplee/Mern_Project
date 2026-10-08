@@ -1,0 +1,143 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.interview-input-group {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 700px;
+  display: flex;
+  gap: 2rem;
+}
+
+/* LEFT SECTION */
+.left {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.left label {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.left textarea {
+  flex: 1;
+}
+
+/* RIGHT SECTION */
+.right {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-group label,
+.input-group p {
+  color: white;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #60a5fa;
+}
+
+textarea {
+  width: 100%;
+  min-height: 180px;
+  resize: none;
+  border: 1px solid #334155;
+  outline: none;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #0f172a;
+  color: white;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+/* FILE INPUT */
+input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.file-label:hover {
+  background: #1d4ed8;
+}
+
+/* BUTTON */
+.primary-button {
+  margin-top: auto;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .interview-input-group {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    min-height: 400px;
+  }
+}
